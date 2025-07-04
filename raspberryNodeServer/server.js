@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url, true);
   const pathname = parsedUrl.pathname;
 
-  res.setHeader("Content-Type", "text/plain");
+  res.writeHead(200, { "Content-Type": "text/html" });
 
   if (pathname === "/about_me") {
     res.statusCode = 200;

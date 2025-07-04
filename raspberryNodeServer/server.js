@@ -18,7 +18,14 @@ const server = http.createServer((req, res) => {
 
   if (pathname === "/about_me") {
     res.statusCode = 200;
-    res.end("Hi! I am Vaishnavi Kaushik, a future billionaire.");
+    res.end(`
+      <html>
+        <body style="background-color: #f0f8ff; color: #333;">
+          <h1 style="color: #4CAF50;">Hi! I am Vaishnavi Kaushik,</h1>
+          <p style="font-size: 20px;">a future billionaire.</p>
+        </body>
+      </html>
+    `);
   } else if (pathname === "/motivation") {
     const quote =
       motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];

@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { IP_ADDRESS } from "../constants";
 
 function JournalEditor() {
   const { id } = useParams();
@@ -9,7 +10,7 @@ function JournalEditor() {
 
   useEffect(() => {
     if (id) {
-      axios.get("/api/journals").then((res) => {
+      axios.get(`${IP_ADDRESS}/api/journals`).then((res) => {
         const found = res.data.find((j) => j.id.toString() === id);
         if (found) setEntry(found);
       });
@@ -21,16 +22,16 @@ function JournalEditor() {
 
   const handleSave = async () => {
     if (id) {
-      await axios.put(`/api/journals/${id}`, entry);
+      await axios.put(`${IP_ADDRESS}/api/journals/${id}`, entry);
     } else {
-      await axios.post("/api/journals", entry);
+      await axios.post(`${IP_ADDRESS}/api/journals`, entry);
     }
     navigate("/journals");
   };
 
   const handleDelete = async () => {
     if (id) {
-      await axios.delete(`/api/journals/${id}`);
+      await axios.delete(`${IP_ADDRESS}/api/journals/${id}`);
     }
     navigate("/journals");
   };

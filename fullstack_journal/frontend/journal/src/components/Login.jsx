@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { IP_ADDRESS } from "../constants";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -11,7 +12,10 @@ function Login() {
     e.preventDefault();
     try {
       console.log(username, password);
-      const res = await axios.post("/api/login", { username, password });
+      const res = await axios.post(`${IP_ADDRESS}/api/login`, {
+        username,
+        password,
+      });
       if (res.data.success) {
         navigate("/journals");
       }

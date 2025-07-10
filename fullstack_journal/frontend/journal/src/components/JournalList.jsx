@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { IP_ADDRESS } from "../constants";
 
 function JournalList() {
   const [journals, setJournals] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("/api/journals").then((res) => setJournals(res.data));
+    axios
+      .get(`${IP_ADDRESS}/api/journals`)
+      .then((res) => setJournals(res.data));
   }, []);
 
   const handleAdd = () => {

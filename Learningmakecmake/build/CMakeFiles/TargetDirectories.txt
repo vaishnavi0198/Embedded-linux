@@ -1,0 +1,3 @@
+C:/PROJECT/OFFICE/EMBEDDED LINUX/Learningmakecmake/build/CMakeFiles/hello.dir
+C:/PROJECT/OFFICE/EMBEDDED LINUX/Learningmakecmake/build/CMakeFiles/edit_cache.dir
+C:/PROJECT/OFFICE/EMBEDDED LINUX/Learningmakecmake/build/CMakeFiles/rebuild_cache.dir

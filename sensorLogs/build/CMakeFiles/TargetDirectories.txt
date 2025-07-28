@@ -1,0 +1,3 @@
+C:/PROJECT/OFFICE/EMBEDDED LINUX/sensorLogs/build/CMakeFiles/sensor_tool.dir
+C:/PROJECT/OFFICE/EMBEDDED LINUX/sensorLogs/build/CMakeFiles/edit_cache.dir
+C:/PROJECT/OFFICE/EMBEDDED LINUX/sensorLogs/build/CMakeFiles/rebuild_cache.dir
